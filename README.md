@@ -59,7 +59,7 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
 fi
 
 # This prevents the error "sign_and_send_pubkey: signing failed: agent refused operation": Source: https://support.nitrokey.com/t/nitrokey-ssh-git-sign-and-send-pubkey-signing-failed-agent-refused-operation/1886
-gpg-connect-agent updatestartuptty /bye >/dev/null
+gpg-connect-agent updatestartuptty /bye > /dev/null
 ```
 Your full `~/.bashrc` file should look like this
 ```bash
@@ -101,7 +101,7 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
 fi
 
 # This prevents the error "sign_and_send_pubkey: signing failed: agent refused operation": Source: https://support.nitrokey.com/t/nitrokey-ssh-git-sign-and-send-pubkey-signing-failed-agent-refused-operation/1886
-gpg-connect-agent updatestartuptty /bye >/dev/null
+gpg-connect-agent updatestartuptty /bye > /dev/null
 ```
 ### Step 4: Reboot , add the SSH key and test
 1. Restart your Fedora Workstation and try the following testes to validate that gpg finds your NitroKey
