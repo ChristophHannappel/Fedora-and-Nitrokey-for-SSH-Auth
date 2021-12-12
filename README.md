@@ -32,13 +32,13 @@ echo pcsc-driver /usr/lib64/libpcsclite.so.1 > ~/.gnupg/scdaemon.conf
 echo disable-ccid >> ~/.gnupg/scdaemon.conf
 ```
 Now your files should look like this:  
-`~/.gnupg/gpg-agent.conf`
+`~/.gnupg/gpg.conf`
 ```conf
 use-agent
 ```
-`~/.gnupg/gpg.conf`
+`~/.gnupg/gpg-agent.conf`
 ```conf
-nable-ssh-support
+enable-ssh-support
 pinentry-program /usr/bin/pinentry-curses
 ```
 `~/.gnupg/scdaemon.conf`
