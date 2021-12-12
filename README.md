@@ -104,11 +104,12 @@ fi
 gpg-connect-agent updatestartuptty /bye >/dev/null
 ```
 ### Step 4: Reboot , add the SSH key and test
-Restart your Fedora Workstation and try the following testes to validate that gpg finds your NitroKey
-`gpg --card-status`
-Now add your SSH Auth Key with the command `ssh-add`
-Check if your public key has been added with `ssh-add -l` 
-Now try to connect via ssh. It should ask you for your PIN.
+1. Restart your Fedora Workstation and try the following testes to validate that gpg finds your NitroKey
+2. Try to show your Nitrokey Contents: `gpg --card-status`
+3. Check if your public key was importet: `gpg --list-keys` 
+4. Add your SSH Auth Key with the command `ssh-add`
+5. Check if your public key has been added with `ssh-add -l` 
+6. Connect via ssh. It should ask you for your PIN.
 ### Known Issues
 If the Nitrokey was plugged in at boot time, you need to restart the pcscd service.
 `sudo systemctl restart pcscd` 
