@@ -51,7 +51,7 @@ disable-ccid
 Append the following to your `~/.bashrc` file.
 ```bash
 # This is a copy of the code at the man page EXAMPLES entry: man gpg-agent
-#  It  is  important to set the environment variable GPG_TTY in your login shell, for example in the ‘~/.bashrc’ init script:
+#  It is important to set the environment variable GPG_TTY in your login shell, for example in the ‘~/.bashrc’ init script:
 export GPG_TTY=$(tty)
 
 # If you enabled the Ssh Agent Support, you also need to tell  ssh  about it by adding this to your init script:
@@ -93,7 +93,7 @@ fi
 
 unset rc
 
-#  It  is  important to set the environment variable GPG_TTY in your login shell, for example in the ‘~/.bashrc’ init script:
+# It is  important to set the environment variable GPG_TTY in your login shell, for example in the ‘~/.bashrc’ init script:
 export GPG_TTY=$(tty)
 
 # If you enabled the Ssh Agent Support, you also need to tell  ssh  about it by adding this to your init script:
