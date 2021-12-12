@@ -65,7 +65,7 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 ```
 Your full `~/.bashrc` file should look like this
 ```bash
- .bashrc
+ # .bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
