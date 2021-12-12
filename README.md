@@ -9,12 +9,10 @@ I've tested it on a fresh Fedora Workstation 35 Installation
 * Public GPG Key in a file
 
 ### Step 1: Import the Public Key
-First you need to make sure your public key is imported and after that it is registered as an SSH Auth Key
+First you need to make sure your public key is imported
 ```bash
 # Import the Key
 gpg --import ./MyPublicKey.asc
-# Add the Key to the SSH Auth Keys
-add-shh
 ```
 
 ### Step 2: Configure the gpg files: gpg.conf, gpg-agent.conf and scdaemon.conf
@@ -105,9 +103,11 @@ fi
 # This prevents the error "sign_and_send_pubkey: signing failed: agent refused operation": Source: https://support.nitrokey.com/t/nitrokey-ssh-git-sign-and-send-pubkey-signing-failed-agent-refused-operation/1886
 gpg-connect-agent updatestartuptty /bye >/dev/null
 ```
-### Step 4: Reboot and test
+### Step 4: Reboot , add the SSH key and test
 Restart your Fedora Workstation and try the following testes to validate that gpg finds your NitroKey
 `gpg --card-status`
+Now add your SSH Auth Key with the command `ssh-add`
+Check if your public key has been added with `ssh-add -l` 
 Now try to connect via ssh. It should ask you for your PIN.
 ### Known Issues
 If the Nitrokey was plugged in at boot time, you need to restart the pcscd service.
