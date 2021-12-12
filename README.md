@@ -1,7 +1,7 @@
 # Fedora-and-Nitrokey-for-SSH-Auth
-How to get the Nitrokey Pro working for SSH Authenticaiton on Fedora Workstation
-I didn't find any complete Guide. So in order to save you sometime here is mine :)  
-I tested it on a fresh Fedora Workstation 35 Installation
+How to get the Nitrokey Pro working for SSH Authenticaiton on Fedora Workstation.  
+I didn't find any complete Guide. So in order to save you sometime here is mine :)   
+I've tested it on a fresh Fedora Workstation 35 Installation
 
 ## Requirements
 * Allready initialized Nitrokey Pro 2 with GPG Keys
